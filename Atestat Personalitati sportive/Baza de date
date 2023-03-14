@@ -1,0 +1,298 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Gazdă: 127.0.0.1
+-- Timp de generare: mart. 14, 2023 la 10:53 PM
+-- Versiune server: 10.4.20-MariaDB
+-- Versiune PHP: 8.0.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Bază de date: `atestat`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `clasament_baschet`
+--
+
+CREATE TABLE `clasament_baschet` (
+  `id` int(11) NOT NULL,
+  `nume` varchar(50) NOT NULL,
+  `echipa` varchar(30) NOT NULL,
+  `nationalitate` varchar(30) NOT NULL,
+  `varsta` int(11) NOT NULL,
+  `voturi` int(10) NOT NULL,
+  `imagine` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `clasament_baschet`
+--
+
+INSERT INTO `clasament_baschet` (`id`, `nume`, `echipa`, `nationalitate`, `varsta`, `voturi`, `imagine`) VALUES
+(1, 'Ahmed Bashir', 'Targu Jiu', 'USA', 30, 21, 'juc_baschet1.jpg'),
+(2, 'Albu Ciprian', 'Cluj CSU', 'ROM', 32, 17, 'juc_baschet2.jpg'),
+(4, 'Miles Bridges', 'Charlotte Hornets', 'USA', 34, 41, 'juc_baschet4.jpg'),
+(5, 'Ja Morant', 'Memphis Grizzlies', 'USA', 22, 0, 'juc_baschet5.jpg'),
+(6, 'LeBron James', 'Los Angeles Lakers', 'USA', 37, 0, 'juc_baschet6.jpg'),
+(7, 'Kemba Walker', 'New York Knicks', 'USA', 32, 0, 'juc_baschet7.jpg'),
+(8, 'Joel Embiid', 'Philadelphia 76ers', 'CAM', 28, 0, 'juc_baschet8.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `clasament_cricket`
+--
+
+CREATE TABLE `clasament_cricket` (
+  `id` int(11) NOT NULL,
+  `nume` varchar(50) NOT NULL,
+  `nationalitate` varchar(30) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `varsta` int(10) NOT NULL,
+  `voturi` int(11) NOT NULL,
+  `imagine` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `clasament_cricket`
+--
+
+INSERT INTO `clasament_cricket` (`id`, `nume`, `nationalitate`, `rating`, `varsta`, `voturi`, `imagine`) VALUES
+(1, 'Steve Smith', 'AUS', 845, 32, 60, 'juc_cricket1.jpg'),
+(4, 'Pat Cummins', 'AUS', 901, 26, 80, 'juc_cricket4.jpg'),
+(5, 'Ravindra Jadeja', 'IND', 385, 27, 70, 'juc_cricket5.jpg'),
+(6, 'Ben Stokes', 'ENG', 298, 29, 62, 'juc_cricket6.jpg'),
+(7, 'Jason Holder', 'WI', 336, 34, 66, 'juc_cricket7.jpg'),
+(12, 'Jasprit Bumrah', 'IND', 830, 28, 0, 'juc_cricket12.jpg'),
+(13, 'Joe Root', 'UK', 843, 31, 0, 'juc_cricket13.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `clasament_fotbal`
+--
+
+CREATE TABLE `clasament_fotbal` (
+  `id` int(11) NOT NULL,
+  `nume` varchar(50) NOT NULL,
+  `club` varchar(30) NOT NULL,
+  `nationalitate` varchar(30) NOT NULL,
+  `varsta` int(10) NOT NULL,
+  `voturi` int(10) NOT NULL,
+  `imagine` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `clasament_fotbal`
+--
+
+INSERT INTO `clasament_fotbal` (`id`, `nume`, `club`, `nationalitate`, `varsta`, `voturi`, `imagine`) VALUES
+(1, 'Lionel Messi', 'Barcelona', 'Argentina', 34, 79, 'juc_fotbal1.jpg'),
+(2, 'Cristiano Ronaldo', 'Manchester United', 'Portugalia', 35, 75, 'juc_fotbal2.jpg'),
+(3, 'Robert Lewandosky', 'Bayern Munchen', 'Polonia', 34, 35, ''),
+(4, 'Neymar Junior', 'Barcelona', 'Brazilia', 27, 62, ''),
+(5, 'Paul Pogba', 'Juventus', 'Franta', 32, 48, ''),
+(6, 'Karim Benzema', 'Real Madrid', 'Franta', 34, 47, ''),
+(7, 'Gareth Bale', 'Real Madrid', 'Tara Galiilor', 36, 68, 'juc_fotbal7.jpg'),
+(8, 'Zlatan Imbrahimovic', 'AC Milan', 'Suedia', 38, 61, 'juc_fotbal8.jpg'),
+(9, 'Antoine Griezmann', 'Atletico Madrid', 'Franta', 31, 62, ''),
+(10, 'Ianis Hagi', 'Rangers Fc', 'Romania', 24, 67, 'juc_fotbal10.jpg'),
+(11, 'Presnel Kipembe', 'PSG', 'FRA', 32, 49, ''),
+(12, 'Kylian Mbappe', 'PSG', 'FRA', 22, 34, ''),
+(13, 'Luis Suares', 'Ateltico Madrid', 'SPA', 35, 60, 'juc_fotbal13.jpg'),
+(19, 'Kante', 'Chelsea', 'FRA', 31, 2, 'juc_fotbal19.jpg'),
+(20, 'Thiago Silva', 'Chelsea', 'BRZ', 37, 0, 'juc_fotbal20.jpg'),
+(21, 'Renato Sanches', 'LOSC Lille', 'POR', 24, 0, 'juc_fotbal21.jpg'),
+(22, 'Kevin De Bruyne', 'Manchester City', 'BEL', 30, 0, 'juc_fotbal22.jpg'),
+(23, 'Erling Haaland', 'Borusia Dortmund', 'NOR', 21, 2, 'juc_fotbal23.jpg'),
+(24, 'Crisan Emanuel', 'FMI 212', 'romana', 19, 2, 'juc_fotbal24.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `clasament_tenis`
+--
+
+CREATE TABLE `clasament_tenis` (
+  `id` int(11) NOT NULL,
+  `nume` varchar(30) NOT NULL,
+  `nationalitate` varchar(30) NOT NULL,
+  `varsta` int(10) NOT NULL,
+  `voturi` int(7) NOT NULL,
+  `imagine` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `clasament_tenis`
+--
+
+INSERT INTO `clasament_tenis` (`id`, `nume`, `nationalitate`, `varsta`, `voturi`, `imagine`) VALUES
+(1, 'Simona Halep', 'Romana', 32, 23, 'juc_tenis1.jpg'),
+(2, 'Karolina Pliskova', 'Cehia', 35, 18, 'juc_tenis2.jpg'),
+(3, 'Sorana Cristea', 'Romania', 25, 26, 'juc_tenis3.jpg'),
+(4, 'Jelena Ostapenko', 'Letonia', 27, 77, 'juc_tenis4.jpg'),
+(5, 'Serena Wiliams', 'USA', 35, 53, 'juc_tenis5.jpg'),
+(6, 'Maria Sarapova', 'RUS', 35, 0, 'juc_tenis6.jpg'),
+(7, 'Caroline Wozniacki', 'DAN', 31, 1, 'juc_tenis7.jpg'),
+(8, 'Shuai Peng', 'CHI', 36, 0, 'juc_tenis8.jpg'),
+(9, 'Ema Raducanu', 'CAN', 19, 1, 'juc_tenis9.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `conturi`
+--
+
+CREATE TABLE `conturi` (
+  `id` int(11) NOT NULL,
+  `nume` varchar(30) NOT NULL,
+  `parola` varchar(30) NOT NULL,
+  `adresa` varchar(30) NOT NULL,
+  `data_nasterii` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `conturi`
+--
+
+INSERT INTO `conturi` (`id`, `nume`, `parola`, `adresa`, `data_nasterii`) VALUES
+(1, 'gabriel', '1234', 'costanfishao@gmail.com', '2013-04-10'),
+(5, 'Timeea', '1234', 'timi12@gmail.com', '2005-04-01'),
+(6, 'Andreea', '1234', 'dea14@gmail.com', '2007-04-01'),
+(7, 'Petruta', 'parola', 'petruta11@gmail.com', '2010-05-25'),
+(8, 'Andreas', '123456', 'andreas16@gmail.com', '2012-04-01'),
+(9, 'gabi', '1234', 'gabi12@gmail.com', '2013-04-02');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `voturi`
+--
+
+CREATE TABLE `voturi` (
+  `id` int(11) NOT NULL,
+  `id_cont` int(11) NOT NULL,
+  `data` datetime NOT NULL,
+  `categorie` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `voturi`
+--
+
+INSERT INTO `voturi` (`id`, `id_cont`, `data`, `categorie`) VALUES
+(1, 1, '2022-05-04 13:03:10', 'fotbal'),
+(4, 1, '2022-05-04 13:06:40', 'fotbal'),
+(36, 1, '2022-05-04 17:35:22', 'cricket'),
+(37, 7, '2022-05-04 20:15:40', 'fotbal'),
+(38, 9, '2022-05-04 20:16:15', 'fotbal'),
+(39, 6, '2022-05-04 20:23:11', 'fotbal'),
+(40, 5, '2022-05-04 20:46:48', 'fotbal'),
+(41, 5, '2022-05-08 11:18:26', 'fotbal'),
+(42, 5, '2022-05-08 11:26:29', 'fotbal'),
+(43, 5, '2022-05-08 11:28:01', 'fotbal'),
+(44, 6, '2022-05-08 13:22:28', 'fotbal'),
+(45, 6, '2022-05-09 18:06:37', 'fotbal'),
+(46, 9, '2022-05-09 20:43:21', 'fotbal'),
+(47, 9, '2023-03-10 17:53:42', 'fotbal'),
+(48, 9, '2023-03-10 18:01:23', 'fotbal'),
+(49, 9, '2023-03-10 22:36:03', 'fotbal'),
+(50, 9, '2023-03-10 22:36:20', 'tenis');
+
+--
+-- Indexuri pentru tabele eliminate
+--
+
+--
+-- Indexuri pentru tabele `clasament_baschet`
+--
+ALTER TABLE `clasament_baschet`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexuri pentru tabele `clasament_cricket`
+--
+ALTER TABLE `clasament_cricket`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexuri pentru tabele `clasament_fotbal`
+--
+ALTER TABLE `clasament_fotbal`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexuri pentru tabele `clasament_tenis`
+--
+ALTER TABLE `clasament_tenis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexuri pentru tabele `conturi`
+--
+ALTER TABLE `conturi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexuri pentru tabele `voturi`
+--
+ALTER TABLE `voturi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pentru tabele eliminate
+--
+
+--
+-- AUTO_INCREMENT pentru tabele `clasament_baschet`
+--
+ALTER TABLE `clasament_baschet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT pentru tabele `clasament_cricket`
+--
+ALTER TABLE `clasament_cricket`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT pentru tabele `clasament_fotbal`
+--
+ALTER TABLE `clasament_fotbal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT pentru tabele `clasament_tenis`
+--
+ALTER TABLE `clasament_tenis`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT pentru tabele `conturi`
+--
+ALTER TABLE `conturi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT pentru tabele `voturi`
+--
+ALTER TABLE `voturi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
