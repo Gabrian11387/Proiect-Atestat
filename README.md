@@ -6,4 +6,4 @@ Acest website oferă posibilitatea utilizatorilor care își fac cont să-și vo
 
 ## Screenshots
 
-![Pagina principală](Proiect-Atestat/Atestat Personalitati sportive/imagini/imagini_readme/pagina principala.png)
+![pagina principala](https://user-images.githubusercontent.com/58972630/227964898-2f8b6111-7794-4b3c-9873-869bfd12def7.png)
