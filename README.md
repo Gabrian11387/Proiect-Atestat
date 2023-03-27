@@ -36,6 +36,23 @@ Aceasta este pagina de vot cu jucătorii de la secțiunea fotbal. Fiecare utiliz
 ![image](https://user-images.githubusercontent.com/58972630/227972932-65628aec-098c-498a-8af4-d1aee345a4fb.png)
 
 
+## Clasamente
+
+![image](https://user-images.githubusercontent.com/58972630/227973653-46ce87b0-5d3e-44e4-a967-303ac0887773.png)
+
+Aceasta pagină oferă o privire de ansamblu utlizatorilor, ajutându-i pe aceștia să vadă cât de mult mai trebuie să urce în ierarhie jucătorii jor preferați pentru a ajunge în top 3. Pagina conține 4 tabele pentru fiecare secțiune de sport, tabele în care sunt incluși toți jucătorii existenți. 
+
+## Adaugă jucători
+
+![image](https://user-images.githubusercontent.com/58972630/227974773-ab312c8d-7e28-4d3b-81cc-df116cb937b8.png)
+
+Această pagină oferă posibilitatea utilizatorilor să adauge jucători noi la oricare dintre cele 4 secțiuni. Odată ce jucătorii sunt adăugați, aceștia vor apărea în pagina de vot, putând să ajungă chiar în pagina principală dacă reușesc să adune destule voturi. 
+
+## Final
+
+Site-ul nu este axat pe estetică, ci pe lucrul cu baze de date și pe funcționalități. A fost realizat individual în aproximativ 3 săptămâni. 
+
+
 
 
 
